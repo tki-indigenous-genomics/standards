@@ -1,6 +1,7 @@
 ---
-Title: Data Storage Standards
-Authors: Sam Buckberry, Jimmy Breen
+title: Data Storage Standards
+author: Sam Buckberry, Jimmy Breen
+output: github_markdown
 ---
 
 
