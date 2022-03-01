@@ -1,3 +1,9 @@
+---
+Title: Data Storage Standards
+Authors: Sam Buckberry, Jimmy Breen
+---
+
+
 # Data storage standards
 A collection of documents on data storage standards for the TKI Indigenous Genomics Group
 
@@ -6,7 +12,7 @@ A collection of documents on data storage standards for the TKI Indigenous Genom
 ## Definitions
 
 **File type:** This is the file format to be typically denoted by the file extension.  
-**Description** A brief description of the file format.  
+**Description:** A brief description of the file format.  
 **Compression:** The algorithm and/or method used to compress the file.  
 **Permissions:** What groups and users have access to the data   
 **Access frequency:** How often this data type may require access. These descriptions are based on a subset of the [Google Cloud storage class descriptors](https://cloud.google.com/storage/docs/storage-classes#classes)
