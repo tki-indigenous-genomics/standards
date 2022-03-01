@@ -17,7 +17,7 @@ Data storage standards for the TKI Indigenous Genomics Group
 - **Nearline:** Nearline Storage is ideal for data you plan to read or modify on average once per month or less. Nearline Storage is appropriate for data backup and short-term archiving.
 - **Archive:** highly durable storage for data archiving, backup, and disaster recovery. Only used for infrequently accessed data.
 
-**Community access:** Are their community custodians for this data? If so, who are they?  
+**Community access:** Are their community custodians for these data? If so, who are they?  
 **Identifiable:** Could this data be used to identify an individual (YES/NO).  
 **Location:** Location(s) where the data should be stored.  
 **Notes:** Any additional information that would assist users of the data.
