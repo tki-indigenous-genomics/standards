@@ -1,12 +1,7 @@
----
-title: Data Storage Standards
-author: Sam Buckberry, Jimmy Breen
-output: github_markdown
----
+Data storage standards
+===
 
-
-# Data storage standards
-A collection of documents on data storage standards for the TKI Indigenous Genomics Group
+Data storage standards for the TKI Indigenous Genomics Group
 
 **Authors:** Sam Buckberry, Jimmy Breen
 
