@@ -92,7 +92,7 @@ chr1	C	3001624	CHG	CA	0.0	0	9
 chr1	C	3001631	CG	CG	1.0	5	5
 ```
 Format descriptions (columns):
-
+```
 (1) chromosome \
 (2) nucleotide on Watson (+) strand \
 (3) position \
@@ -101,6 +101,7 @@ Format descriptions (columns):
 (6) methylation-level = #_of_C / (#_of_C + #_of_T) \
 (7) #_of_C (methylated C, the count of reads showing C here) \
 (8) = #_of_C + #_of_T (all Cytosines, the count of reads showing C or T here)
+```
 
 **File type:** ATCGmap \
 **Description:**  TSV file of stranded pileup base calls for DNA methylation data.  
@@ -121,7 +122,7 @@ chr1	C	3009413	CG	CG	0	10	50	0	0	0	0	0	0	0	0.83
 ```
 
 Format descriptions (columns):
-
+```
 (1) chromosome \
 (2) nucleotide on Watson (+) strand \
 (3) position \
@@ -141,7 +142,7 @@ Format descriptions (columns):
 (15) # of reads from Crick strand mapped here, support N \
 (16) methylation_level = #C/(#C+#T) = C8/(C7+C8) for Watson strand, =C14/(C11+C14) for Crick strand \
 "nan" means none reads support C/T at this position. \
-
+```
 
 **File type:** Bigwig  
 **Description:**  
