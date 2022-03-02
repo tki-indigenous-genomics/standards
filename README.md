@@ -5,6 +5,9 @@ Data storage standards for the TKI Indigenous Genomics Group
 
 **Authors:** Sam Buckberry, Jimmy Breen
 
+## Background
+Here we outline our standards for genomic data storage, access and sharing. will Where possible, these standards will align with the The Global Alliance for Genomics and Health (GA4GH)[https://www.ga4gh.org/] standards.
+
 ## Definitions
 
 **File type:** This is the file format to be typically denoted by the file extension. \
