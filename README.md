@@ -1,8 +1,6 @@
 Data storage standards
 ===
 
-Data storage standards for the TKI Indigenous Genomics Group
-
 **Authors:** Sam Buckberry, Jimmy Breen
 
 ## Background
