@@ -1,100 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 5 DNA methylation | Data Standards - TKI Indigenous Genomics</title>
-<meta name="author" content="Sam Buckberry &amp; Jimmy Breen">
-<meta name="description" content="5.1 Raw data  5.1.1 FASTQ File type: FASTQ Description:Compression:Permissions:Access frequency: Community access: Identifiable:Location:Notes:   5.2 Mapped data  5.2.1 CRAM File type:...">
-<meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 5 DNA methylation | Data Standards - TKI Indigenous Genomics">
-<meta property="og:type" content="book">
-<meta property="og:description" content="5.1 Raw data  5.1.1 FASTQ File type: FASTQ Description:Compression:Permissions:Access frequency: Community access: Identifiable:Location:Notes:   5.2 Mapped data  5.2.1 CRAM File type:...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 5 DNA methylation | Data Standards - TKI Indigenous Genomics">
-<meta name="twitter:description" content="5.1 Raw data  5.1.1 FASTQ File type: FASTQ Description:Compression:Permissions:Access frequency: Community access: Identifiable:Location:Notes:   5.2 Mapped data  5.2.1 CRAM File type:...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 DNA methylation | Data Standards - TKI Indigenous Genomics</title>
+  <meta name="description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 DNA methylation | Data Standards - TKI Indigenous Genomics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
+  <meta name="github-repo" content="tki-indigenous-genomics/standards" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 DNA methylation | Data Standards - TKI Indigenous Genomics" />
+  
+  <meta name="twitter:description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
+  
+
+<meta name="author" content="Sam Buckberry &amp; Jimmy Breen" />
+
+
+<meta name="date" content="2022-03-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="whole-genome-sequencing.html"/>
+<link rel="next" href="how-to-contribute.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Data Standards - TKI Indigenous Genomics</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
-    </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Introduction</a></li>
-<li><a class="" href="background.html"><span class="header-section-number">2</span> Background</a></li>
-<li><a class="" href="data-descriptors-definitions.html"><span class="header-section-number">3</span> Data descriptors &amp; definitions</a></li>
-<li><a class="" href="whole-genome-sequencing.html"><span class="header-section-number">4</span> Whole genome sequencing</a></li>
-<li><a class="active" href="dna-methylation.html"><span class="header-section-number">5</span> DNA methylation</a></li>
-<li><a class="" href="how-to-contribute.html"><span class="header-section-number">6</span> How to contribute</a></li>
-<li><a class="" href="references.html">References</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2</b> Background</a></li>
+<li class="chapter" data-level="3" data-path="data-descriptors-definitions.html"><a href="data-descriptors-definitions.html"><i class="fa fa-check"></i><b>3</b> Data descriptors &amp; definitions</a></li>
+<li class="chapter" data-level="4" data-path="whole-genome-sequencing.html"><a href="whole-genome-sequencing.html"><i class="fa fa-check"></i><b>4</b> Whole genome sequencing</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="whole-genome-sequencing.html"><a href="whole-genome-sequencing.html#cram"><i class="fa fa-check"></i><b>4.1</b> CRAM</a></li>
+<li class="chapter" data-level="4.2" data-path="whole-genome-sequencing.html"><a href="whole-genome-sequencing.html#vcf"><i class="fa fa-check"></i><b>4.2</b> VCF</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="dna-methylation.html"><a href="dna-methylation.html"><i class="fa fa-check"></i><b>5</b> DNA methylation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dna-methylation.html"><a href="dna-methylation.html#raw-data"><i class="fa fa-check"></i><b>5.1</b> Raw data</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="dna-methylation.html"><a href="dna-methylation.html#fastq"><i class="fa fa-check"></i><b>5.1.1</b> FASTQ</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="dna-methylation.html"><a href="dna-methylation.html#mapped-data"><i class="fa fa-check"></i><b>5.2</b> Mapped data</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="dna-methylation.html"><a href="dna-methylation.html#cram-1"><i class="fa fa-check"></i><b>5.2.1</b> CRAM</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="dna-methylation.html"><a href="dna-methylation.html#processed-data"><i class="fa fa-check"></i><b>5.3</b> Processed data</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="dna-methylation.html"><a href="dna-methylation.html#cgmap"><i class="fa fa-check"></i><b>5.3.1</b> CGmap</a></li>
+<li class="chapter" data-level="5.3.2" data-path="dna-methylation.html"><a href="dna-methylation.html#atcgmap"><i class="fa fa-check"></i><b>5.3.2</b> ATCGmap</a></li>
+<li class="chapter" data-level="5.3.3" data-path="dna-methylation.html"><a href="dna-methylation.html#bigwig"><i class="fa fa-check"></i><b>5.3.3</b> Bigwig</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>6</b> How to contribute</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
-        <div class="book-extra">
-          
-        </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="dna-methylation" class="section level1" number="5">
-<h1>
-<span class="header-section-number">5</span> DNA methylation<a class="anchor" aria-label="anchor" href="#dna-methylation"><i class="fas fa-link"></i></a>
-</h1>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Standards - TKI Indigenous Genomics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dna-methylation" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> DNA methylation</h1>
+<hr />
 <div id="raw-data" class="section level2" number="5.1">
-<h2>
-<span class="header-section-number">5.1</span> Raw data<a class="anchor" aria-label="anchor" href="#raw-data"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">5.1</span> Raw data</h2>
 <div id="fastq" class="section level3" number="5.1.1">
-<h3>
-<span class="header-section-number">5.1.1</span> FASTQ<a class="anchor" aria-label="anchor" href="#fastq"><i class="fas fa-link"></i></a>
-</h3>
-<p><strong>File type:</strong> FASTQ
-<strong>Description:</strong><br><strong>Compression:</strong><br><strong>Permissions:</strong><br><strong>Access frequency:</strong>
-<strong>Community access:</strong>
-<strong>Identifiable:</strong><br><strong>Location:</strong><br><strong>Notes:</strong></p>
+<h3><span class="header-section-number">5.1.1</span> FASTQ</h3>
+<p><strong>File type:</strong> FASTQ<br />
+<strong>Description:</strong><br />
+<strong>Compression:</strong><br />
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong><br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong></p>
+<hr />
 </div>
 </div>
 <div id="mapped-data" class="section level2" number="5.2">
-<h2>
-<span class="header-section-number">5.2</span> Mapped data<a class="anchor" aria-label="anchor" href="#mapped-data"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">5.2</span> Mapped data</h2>
 <div id="cram-1" class="section level3" number="5.2.1">
-<h3>
-<span class="header-section-number">5.2.1</span> CRAM<a class="anchor" aria-label="anchor" href="#cram-1"><i class="fas fa-link"></i></a>
-</h3>
-<p><strong>File type:</strong> CRAM<br><strong>Description:</strong> Genomic alignments (typically). CRAM supports a wide
-range of lossless and lossy sequence data preservation strategies enabling users to choose which data should be preserved. <a href="https://www.ga4gh.org/cram/">CRAM is the genomics compression standard for GA4GH</a><br><strong>Compression:</strong> NA<br><strong>Permissions:</strong><br><strong>Community access:</strong><br><strong>Location:</strong>
-<strong>Notes:</strong> When used with a reference genome, this exact reference genome file should be recorded.<br><a href="https://samtools.github.io/hts-specs/CRAMv3.pdf">CRAM specification</a></p>
+<h3><span class="header-section-number">5.2.1</span> CRAM</h3>
+<p><strong>File type:</strong> CRAM<br />
+<strong>Description:</strong> Genomic alignments (typically). CRAM supports a wide
+range of lossless and lossy sequence data preservation strategies enabling users to choose which data should be preserved. <a href="https://www.ga4gh.org/cram/">CRAM is the genomics compression standard for GA4GH</a><br />
+<strong>Compression:</strong> NA<br />
+<strong>Permissions:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Location:</strong>
+<strong>Notes:</strong> When used with a reference genome, this exact reference genome file should be recorded.<br />
+<a href="https://samtools.github.io/hts-specs/CRAMv3.pdf">CRAM specification</a></p>
+<hr />
 </div>
 </div>
 <div id="processed-data" class="section level2" number="5.3">
-<h2>
-<span class="header-section-number">5.3</span> Processed data<a class="anchor" aria-label="anchor" href="#processed-data"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">5.3</span> Processed data</h2>
 <div id="cgmap" class="section level3" number="5.3.1">
-<h3>
-<span class="header-section-number">5.3.1</span> CGmap<a class="anchor" aria-label="anchor" href="#cgmap"><i class="fas fa-link"></i></a>
-</h3>
-<p><strong>File type:</strong> CGmap<br><strong>Description:</strong> TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.
+<h3><span class="header-section-number">5.3.1</span> CGmap</h3>
+<p><strong>File type:</strong> CGmap<br />
+<strong>Description:</strong> TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.
 <strong>Compression:</strong> gzip
-<strong>Permissions:</strong><br><strong>Access frequency:</strong><br><strong>Community access:</strong><br><strong>Identifiable:</strong><br><strong>Location:</strong><br><strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br><strong>Sample:</strong></p>
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong><br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br />
+<strong>Sample:</strong></p>
 <pre><code>chr1    G   3000851 CHH CC  0.1 1   10
 chr1    C   3001624 CHG CA  0.0 0   9
 chr1    C   3001631 CG  CG  1.0 5   5</code></pre>
@@ -109,10 +183,17 @@ chr1    C   3001631 CG  CG  1.0 5   5</code></pre>
 (8) = #_of_C + #_of_T (all Cytosines, the count of reads showing C or T here)</code></pre>
 </div>
 <div id="atcgmap" class="section level3" number="5.3.2">
-<h3>
-<span class="header-section-number">5.3.2</span> ATCGmap<a class="anchor" aria-label="anchor" href="#atcgmap"><i class="fas fa-link"></i></a>
-</h3>
-<p><strong>File type:</strong> ATCGmap<br><strong>Description:</strong> TSV file of stranded pileup base calls for DNA methylation data.<br><strong>Compression:</strong> gzip<br><strong>Permissions:</strong><br><strong>Access frequency:</strong><br><strong>Community access:</strong><br><strong>Identifiable:</strong> YES<br><strong>Location:</strong><br><strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br><strong>Sample:</strong></p>
+<h3><span class="header-section-number">5.3.2</span> ATCGmap</h3>
+<p><strong>File type:</strong> ATCGmap<br />
+<strong>Description:</strong> TSV file of stranded pileup base calls for DNA methylation data.<br />
+<strong>Compression:</strong> gzip<br />
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong> YES<br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br />
+<strong>Sample:</strong></p>
 <pre><code>chr1    T   3009410 --  --  0   10  0   0   0   0   0   0   0   0   na
 chr1    C   3009411 CHH CC  0   10  0   0   0   0   0   0   0   0   0.0
 chr1    C   3009412 CHG CC  0   10  0   0   0   0   0   0   0   0   0.0
@@ -136,61 +217,83 @@ chr1    C   3009413 CG  CG  0   10  50  0   0   0   0   0   0   0   0.83</code><
 (14) # of reads from Crick strand mapped here, support G on Watson strand and C on Crick strand \
 (15) # of reads from Crick strand mapped here, support N \
 (16) methylation_level = #C/(#C+#T) = C8/(C7+C8) for Watson strand, =C14/(C11+C14) for Crick strand \
-"nan" means none reads support C/T at this position. \</code></pre>
+&quot;nan&quot; means none reads support C/T at this position. \</code></pre>
 </div>
 <div id="bigwig" class="section level3" number="5.3.3">
-<h3>
-<span class="header-section-number">5.3.3</span> Bigwig<a class="anchor" aria-label="anchor" href="#bigwig"><i class="fas fa-link"></i></a>
-</h3>
-<p><strong>File type:</strong> Bigwig<br><strong>Description:</strong><br><strong>Compression:</strong><br><strong>Permissions:</strong><br><strong>Access frequency:</strong><br><strong>Community access:</strong><br><strong>Identifiable:</strong><br><strong>Location:</strong><br><strong>Notes:</strong></p>
+<h3><span class="header-section-number">5.3.3</span> Bigwig</h3>
+<p><strong>File type:</strong> Bigwig<br />
+<strong>Description:</strong><br />
+<strong>Compression:</strong><br />
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong><br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong></p>
 
 </div>
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="prev"><a href="whole-genome-sequencing.html"><span class="header-section-number">4</span> Whole genome sequencing</a></div>
-<div class="next"><a href="how-to-contribute.html"><span class="header-section-number">6</span> How to contribute</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#dna-methylation"><span class="header-section-number">5</span> DNA methylation</a></li>
-<li>
-<a class="nav-link" href="#raw-data"><span class="header-section-number">5.1</span> Raw data</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#fastq"><span class="header-section-number">5.1.1</span> FASTQ</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#mapped-data"><span class="header-section-number">5.2</span> Mapped data</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#cram-1"><span class="header-section-number">5.2.1</span> CRAM</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#processed-data"><span class="header-section-number">5.3</span> Processed data</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#cgmap"><span class="header-section-number">5.3.1</span> CGmap</a></li>
-<li><a class="nav-link" href="#atcgmap"><span class="header-section-number">5.3.2</span> ATCGmap</a></li>
-<li><a class="nav-link" href="#bigwig"><span class="header-section-number">5.3.3</span> Bigwig</a></li>
-</ul>
-</li>
-</ul>
+            </section>
 
-      <div class="book-extra">
-        <ul class="list-unstyled">
-          
-        </ul>
-</div>
-    </nav>
-</div>
-
-</div>
-</div> <!-- .container -->
-
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Data Standards - TKI Indigenous Genomics</strong>" was written by Sam Buckberry &amp; Jimmy Breen. It was last built on 2022-03-02.</p>
+          </div>
+        </div>
+      </div>
+<a href="whole-genome-sequencing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-contribute.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-dna-methylation.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer>
 </body>
+
 </html>
