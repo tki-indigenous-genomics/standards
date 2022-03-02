@@ -4,7 +4,7 @@ Data storage standards
 **Authors:** Sam Buckberry, Jimmy Breen
 
 ## Background
-Here we outline our standards for genomic data storage, access and sharing. will Where possible, these standards will align with the The Global Alliance for Genomics and Health [GA4GH](https://www.ga4gh.org/) standards.
+Here we outline our standards for genomic data storage, access and sharing. will Where possible, these standards will align with the The Global Alliance for Genomics and Health [GA4GH](https://www.ga4gh.org/) standards.  
 
 ## Definitions
 
