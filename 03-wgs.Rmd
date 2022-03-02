@@ -1,0 +1,25 @@
+# Whole genome sequencing
+
+## CRAM
+
+**File type:** CRAM  
+**Description:**  CRAM supports a wide
+range of lossless and lossy sequence data preservation strategies enabling users to choose which data should be preserved. [CRAM is the genomics compression standard for GA4GH](https://www.ga4gh.org/cram/) \
+**Compression:** NA   
+**Permissions:**  
+**Community access:**  
+**Location:**
+**Notes:** When used with a reference genome, this exact reference genome file should be recorded.   
+[CRAM specification](https://samtools.github.io/hts-specs/CRAMv3.pdf)  
+
+## VCF
+
+**File type:** VCF  
+**Description:**  
+**Compression:**  
+**Permissions:**  
+**Access frequency:**  
+**Community access:**  
+**Identifiable:**  
+**Location:**  
+**Notes:**  

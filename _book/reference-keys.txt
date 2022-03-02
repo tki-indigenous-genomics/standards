@@ -1,0 +1,16 @@
+introduction
+background
+data-descriptors-definitions
+whole-genome-sequencing
+cram
+vcf
+dna-methylation
+raw-data
+fastq
+mapped-data
+cram-1
+processed-data
+cgmap
+atcgmap
+bigwig
+how-to-contribute
