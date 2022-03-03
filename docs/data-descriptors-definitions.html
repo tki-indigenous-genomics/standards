@@ -143,8 +143,14 @@
 <p><strong>Description:</strong> A brief description of the file format.</p>
 <p><strong>Compression:</strong> The algorithm and/or method used to compress the file.<br />
 </p>
-<p><strong>Permissions:</strong> The groups and users that have access to the data.<br />
+<p><strong>Permissions:</strong> These are the user permission profiles for the groups and users that have access to the data, and the level of access<br />
 </p>
+<ul>
+<li>Category 1: (Highest): Lead PI (Alex Brown) and Chief Data Scientist (Jimmy Breen)</li>
+<li>Category 2: Lead PI, Chief Data Scientist and Data Science team</li>
+<li>Category 3: Lead PI, Chief Data Scientist, Data Science team and TKI IT Team</li>
+<li>Category 4: (Lowest): Public</li>
+</ul>
 <p><strong>Access frequency:</strong> How often this data type may require access. These descriptions are based on a subset of the <a href="https://cloud.google.com/storage/docs/storage-classes#classes">Google Cloud storage class descriptors</a>.</p>
 <ul>
 <li><strong>Standard:</strong> Standard Storage is for data that is frequently accessed and/or stored for only brief periods of time. Standard data files should be able to be regenerated from Nearline or Archive data files without too much time or effort.</li>
@@ -160,19 +166,19 @@
 <p><strong>Notes:</strong> Any additional information that would assist users of the data.<br />
 </p>
 <p><strong>Sample:</strong> A sample of the file data with descriptions of each field. Useful if this file type is not a widely used and documented standard.</p>
-<p>For example, the description the CGmap file format for DNA methylation data would look:</p>
 </div>
 <div id="example" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Example</h2>
+<p>For example, the description of CGmap file format for DNA methylation data would look like this:</p>
 <blockquote>
 <p><strong>File type:</strong> CGmap<br />
 <strong>Description:</strong> TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.<br />
 <strong>Compression:</strong> gzip<br />
-<strong>Permissions:</strong><br />
-<strong>Access frequency:</strong><br />
-<strong>Community access:</strong><br />
-<strong>Identifiable:</strong><br />
-<strong>Location:</strong><br />
+<strong>Permissions:</strong> Category 2<br />
+<strong>Access frequency:</strong> Nearline<br />
+<strong>Community access:</strong> TBD<br />
+<strong>Identifiable:</strong> No<br />
+<strong>Location:</strong> server_name::/location/of/data/<br />
 <strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br />
 <strong>Sample:</strong></p>
 <p>chr1 G 3000851 CHH CC 0.1 1 10<br />

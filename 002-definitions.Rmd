@@ -13,7 +13,12 @@ Biological data continue to be produced from an extensive array of assays and te
 
 **Compression:** The algorithm and/or method used to compress the file. \
 
-**Permissions:** The groups and users that have access to the data. \
+**Permissions:** These are the user permission profiles for the groups and users that have access to the data, and the level of access \
+
+- Category 1: (Highest): Lead PI (Alex Brown) and Chief Data Scientist (Jimmy Breen)
+- Category 2: Lead PI, Chief Data Scientist and Data Science team
+- Category 3: Lead PI, Chief Data Scientist, Data Science team and TKI IT Team
+- Category 4: (Lowest): Public
 
 **Access frequency:** How often this data type may require access. These descriptions are based on a subset of the [Google Cloud storage class descriptors](https://cloud.google.com/storage/docs/storage-classes#classes).
 
@@ -31,18 +36,18 @@ Biological data continue to be produced from an extensive array of assays and te
 
 **Sample:** A sample of the file data with descriptions of each field. Useful if this file type is not a widely used and documented standard.
 
-For example, the description the CGmap file format for DNA methylation data would look:
-
 ## Example
+
+For example, the description of CGmap file format for DNA methylation data would look like this:
 
 >**File type:** CGmap  
 **Description:**  TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.  
-**Compression:**  gzip  
-**Permissions:**  
-**Access frequency:**  
-**Community access:**  
-**Identifiable:**  
-**Location:**  
+**Compression:** gzip    
+**Permissions:** Category 2  
+**Access frequency:**  Nearline  
+**Community access:**  TBD  
+**Identifiable:**  No  
+**Location:**  server_name::/location/of/data/  
 **Notes:** This file type is output from [BSSeeker2](https://github.com/BSSeeker/BSseeker2) and used by [CGmap tools](https://cgmaptools.github.io/)  
 **Sample:**  
 >
