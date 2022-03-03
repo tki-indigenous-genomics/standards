@@ -12,9 +12,9 @@ github-repo: tki-indigenous-genomics/standards
 description: "TKI Indigenous Genomics groups standards for data storage, access and sharing."
 colorlinks: yes
 graphics: yes
-#lot: yes
-#lof: yes
-#fontsize: 11pt
+lot: yes
+lof: yes
+fontsize: 11pt
 ---
 
 ```{r include=FALSE}
