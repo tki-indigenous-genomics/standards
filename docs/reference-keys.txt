@@ -2,6 +2,7 @@ introduction
 data-descriptors-definitions
 describing-primary-data-file-types
 file-type-descriptors
+example
 metadata
 whole-genome-sequencing
 cram
@@ -16,4 +17,3 @@ cgmap
 atcgmap
 bigwig
 how-to-contribute
-example
