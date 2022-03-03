@@ -1,10 +1,15 @@
 # Data descriptors & definitions
 
+This page provides definitions and guidance on the information that should be recorded for primary data files. Data that is clearly, simply and consistently described (named and defined) is much easier for users to identify, understand, use and share the data. This also ensures consistency across projects, inter-operability and is complementary to reproducible research practices. 
 
+## Describing primary data file types
+Biological data continue to be produced from an extensive array of assays and technologies. These data are often represented in unique file types and processed by specific software and algorithms. **Below are descriptors that should be used for each file type.**   
 
-**File type:** This is the file format to be typically denoted by the file extension. \
+## File type descriptors
 
-**Description:** A brief description of the file format. \
+**File type:** This is the file format to be typically denoted by the file extension.  
+
+**Description:** A brief description of the file format.  
 
 **Compression:** The algorithm and/or method used to compress the file. \
 
@@ -25,3 +30,34 @@
 **Notes:** Any additional information that would assist users of the data. \
 
 **Sample:** A sample of the file data with descriptions of each field. Useful if this file type is not a widely used and documented standard.
+
+For example, the description the CGmap file format for DNA methylation data would look:
+
+## Example
+
+>**File type:** CGmap  
+**Description:**  TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.  
+**Compression:**  gzip  
+**Permissions:**  
+**Access frequency:**  
+**Community access:**  
+**Identifiable:**  
+**Location:**  
+**Notes:** This file type is output from [BSSeeker2](https://github.com/BSSeeker/BSseeker2) and used by [CGmap tools](https://cgmaptools.github.io/)  
+**Sample:**  
+>
+>chr1	G	3000851	CHH	CC	0.1	1	10  
+>chr1	C	3001624	CHG	CA	0.0	0	9  
+>chr1	C	3001631	CG	CG	1.0	5	5  
+>
+>Format descriptions (columns):  
+(1) chromosome \
+(2) nucleotide on Watson (+) strand \
+(3) position \
+(4) context (CG/CHG/CHH) \
+(5) dinucleotide-context (CA/CC/CG/CT) \
+(6) methylation-level = #_of_C / (#_of_C + #_of_T) \
+(7) #_of_C (methylated C, the count of reads showing C here) \
+(8) = #_of_C + #_of_T (all Cytosines, the count of reads showing C or T here)
+
+

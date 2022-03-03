@@ -6,7 +6,7 @@
 ]{book}
 \title{Data Standards - TKI Indigenous Genomics}
 \author{Sam Buckberry \& Jimmy Breen}
-\date{2022-03-02}
+\date{2022-03-03}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -96,17 +96,57 @@
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
-Here we outline TKI Indigenous Genomics groups standards for data storage, access and sharing. Where possible, these standards will align with the The Global Alliance for Genomics and Health \href{https://www.ga4gh.org/}{GA4GH} standards.
+\textbf{\emph{Note: These standards are currently in development and are yet to be officially implemented}}
 
-\hypertarget{background}{%
-\chapter{Background}\label{background}}
+In this era of leveraging big data and genomics for precision medicine, small populations such as Indigenous Australians are at high risk for under-representation or complete lack of representation. Our goal is to collect, curate and assemble robust datasets that encompass critical aspects of Indigenous Australian health to ensure equitable outcomes in precision medicine are possible. This includes biological, cultural and socioeconomic data to investigate health outcomes that will deliver meaningful benefit to Indigenous Australians. However, with big data also come significant responsibilities concerning data storage, sovereignty and accessibility. Large collections of data on Indigenous Australians require carefully considered data architecture that maintains sovereignty based on community-defined priorities, protocols, and agreements, with concomitant attendance to matters of accountability and building trust.
+
+Here we outline TKI Indigenous Genomics groups standards for data storage, access and sharing. \textbf{The goal of these data standards is to document the policies, rules, and standards governing how data are stored, secured, arranged, integrated, and used in analyses and reporting.} These standards are being developed in consultation with Indigenous Communities. Where possible, these standards will also align with the The Global Alliance for Genomics and Health \href{https://www.ga4gh.org/}{GA4GH} standards. A well-considered approach to data architecture is critical given the national importance of Indigenous genomics data security.
 
 \hypertarget{data-descriptors-definitions}{%
 \chapter{Data descriptors \& definitions}\label{data-descriptors-definitions}}
 
-\textbf{File type:} This is the file format to be typically denoted by the file extension.\\
+This page provides definitions and guidance on the information that should be recorded for primary data files. Data that is clearly, simply and consistently described (named and defined) is much easier for users to identify, understand, use and share the data. This also ensures consistency across projects, inter-operability and is complementary to reproducible research practices.
 
-\textbf{Description:} A brief description of the file format.\\
+\hypertarget{describing-primary-data-file-types}{%
+\section{Describing primary data file types}\label{describing-primary-data-file-types}}
+
+Biological data continue to be produced from an extensive array of assays and technologies. These data are often represented in unique file types and processed by specific software and algorithms. \textbf{Below are descriptors that should be used for each file type.}
+
+For example, the description the CGmap file format for DNA methylation data would look:
+
+\begin{quote}
+\textbf{File type:} CGmap\\
+\textbf{Description:} TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.\\
+\textbf{Compression:} gzip\\
+\textbf{Permissions:}\\
+\textbf{Access frequency:}\\
+\textbf{Community access:}\\
+\textbf{Identifiable:}\\
+\textbf{Location:}\\
+\textbf{Notes:} This file type is output from \href{https://github.com/BSSeeker/BSseeker2}{BSSeeker2} and used by \href{https://cgmaptools.github.io/}{CGmap tools}\\
+\textbf{Sample:}
+
+chr1 G 3000851 CHH CC 0.1 1 10\\
+chr1 C 3001624 CHG CA 0.0 0 9\\
+chr1 C 3001631 CG CG 1.0 5 5
+
+Format descriptions (columns):\\
+(1) chromosome\\
+(2) nucleotide on Watson (+) strand\\
+(3) position\\
+(4) context (CG/CHG/CHH)\\
+(5) dinucleotide-context (CA/CC/CG/CT)\\
+(6) methylation-level = \#\_of\_C / (\#\_of\_C + \#\_of\_T)\\
+(7) \#\_of\_C (methylated C, the count of reads showing C here)\\
+(8) = \#\_of\_C + \#\_of\_T (all Cytosines, the count of reads showing C or T here)
+\end{quote}
+
+\hypertarget{file-type-descriptors}{%
+\section{File type descriptors}\label{file-type-descriptors}}
+
+\textbf{File type:} This is the file format to be typically denoted by the file extension.
+
+\textbf{Description:} A brief description of the file format.
 
 \textbf{Compression:} The algorithm and/or method used to compress the file.\\
 
@@ -133,6 +173,9 @@ Here we outline TKI Indigenous Genomics groups standards for data storage, acces
 \textbf{Notes:} Any additional information that would assist users of the data.\\
 
 \textbf{Sample:} A sample of the file data with descriptions of each field. Useful if this file type is not a widely used and documented standard.
+
+\hypertarget{metadata}{%
+\chapter{Metadata}\label{metadata}}
 
 \hypertarget{whole-genome-sequencing}{%
 \chapter{Whole genome sequencing}\label{whole-genome-sequencing}}
