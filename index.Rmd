@@ -5,7 +5,6 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
-#documentclass: krantz
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
@@ -13,9 +12,9 @@ github-repo: tki-indigenous-genomics/standards
 description: "TKI Indigenous Genomics groups standards for data storage, access and sharing."
 colorlinks: yes
 graphics: yes
-lot: yes
-lof: yes
-fontsize: 11pt
+#lot: yes
+#lof: yes
+#fontsize: 11pt
 ---
 
 ```{r include=FALSE}
@@ -24,16 +23,6 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 
-knitr::opts_chunk$set(tidy = TRUE, webshot = "webshot")
-if (knitr::is_html_output()) {
-  # ignore percentage widths for HTML output, unless they are used for multiple
-  # figures side by side
-  knitr::opts_hooks$set(out.width = function(options) {
-    if (options$fig.show != 'hold' && grepl('%$', options$out.width))
-      options$out.width = NULL
-    options
-  })
-}
 ```
 
 # Introduction
@@ -48,4 +37,5 @@ In this era of leveraging big data and genomics for precision medicine, small po
 
 Here we outline TKI Indigenous Genomics groups standards for data storage, access and sharing. **The goal of these data standards is to document the policies, rules, and standards governing how data are stored, secured, arranged, integrated, and used in analyses and reporting.** These standards are being developed in consultation with Indigenous Communities. Where possible, these standards will also align with the The Global Alliance for Genomics and Health [GA4GH](https://www.ga4gh.org/) standards. A well-considered approach to data architecture is critical given the national importance of Indigenous genomics data security.
 
+## Structure of this book
 

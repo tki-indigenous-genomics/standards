@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics</title>
+  <title>2.3 Example | Data Standards - TKI Indigenous Genomics</title>
   <meta name="description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics" />
+  <meta property="og:title" content="2.3 Example | Data Standards - TKI Indigenous Genomics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tki-indigenous-genomics/standards" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics" />
+  <meta name="twitter:title" content="2.3 Example | Data Standards - TKI Indigenous Genomics" />
   
   <meta name="twitter:description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="example.html"/>
-<link rel="next" href="whole-genome-sequencing.html"/>
+<link rel="prev" href="file-type-descriptors.html"/>
+<link rel="next" href="metadata.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -130,17 +130,42 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="metadata" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Metadata</h1>
+<div id="example" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Example</h2>
+<blockquote>
+<p><strong>File type:</strong> CGmap<br />
+<strong>Description:</strong> TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.<br />
+<strong>Compression:</strong> gzip<br />
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong><br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br />
+<strong>Sample:</strong></p>
+<p>chr1 G 3000851 CHH CC 0.1 1 10<br />
+chr1 C 3001624 CHG CA 0.0 0 9<br />
+chr1 C 3001631 CG CG 1.0 5 5</p>
+<p>Format descriptions (columns):<br />
+(1) chromosome<br />
+(2) nucleotide on Watson (+) strand<br />
+(3) position<br />
+(4) context (CG/CHG/CHH)<br />
+(5) dinucleotide-context (CA/CC/CG/CT)<br />
+(6) methylation-level = #_of_C / (#_of_C + #_of_T)<br />
+(7) #_of_C (methylated C, the count of reads showing C here)<br />
+(8) = #_of_C + #_of_T (all Cytosines, the count of reads showing C or T here)</p>
+</blockquote>
 
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="example.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="whole-genome-sequencing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="file-type-descriptors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="metadata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

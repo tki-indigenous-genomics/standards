@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics</title>
+  <title>2.2 File type descriptors | Data Standards - TKI Indigenous Genomics</title>
   <meta name="description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics" />
+  <meta property="og:title" content="2.2 File type descriptors | Data Standards - TKI Indigenous Genomics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tki-indigenous-genomics/standards" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics" />
+  <meta name="twitter:title" content="2.2 File type descriptors | Data Standards - TKI Indigenous Genomics" />
   
   <meta name="twitter:description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="example.html"/>
-<link rel="next" href="whole-genome-sequencing.html"/>
+<link rel="prev" href="describing-primary-data-file-types.html"/>
+<link rel="next" href="example.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -130,17 +130,38 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="metadata" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Metadata</h1>
-
+<div id="file-type-descriptors" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> File type descriptors</h2>
+<p><strong>File type:</strong> This is the file format to be typically denoted by the file extension.</p>
+<p><strong>Description:</strong> A brief description of the file format.</p>
+<p><strong>Compression:</strong> The algorithm and/or method used to compress the file.<br />
+</p>
+<p><strong>Permissions:</strong> The groups and users that have access to the data.<br />
+</p>
+<p><strong>Access frequency:</strong> How often this data type may require access. These descriptions are based on a subset of the <a href="https://cloud.google.com/storage/docs/storage-classes#classes">Google Cloud storage class descriptors</a>.</p>
+<ul>
+<li><strong>Standard:</strong> Standard Storage is for data that is frequently accessed and/or stored for only brief periods of time. Standard data files should be able to be regenerated from Nearline or Archive data files without too much time or effort.</li>
+<li><strong>Nearline:</strong> Nearline Storage is ideal for data you plan to read or modify on average once per month or less. Nearline Storage is appropriate for data backup and short-term archiving.</li>
+<li><strong>Archive:</strong> highly durable storage for data archiving, backup, and disaster recovery. Only used for infrequently accessed data.</li>
+</ul>
+<p><strong>Community access:</strong> Are their community custodians for these data? If so, who are they?<br />
+</p>
+<p><strong>Identifiable:</strong> Could this data be used to identify an individual (YES/NO).<br />
+</p>
+<p><strong>Location:</strong> Location(s) where the data should be stored.<br />
+</p>
+<p><strong>Notes:</strong> Any additional information that would assist users of the data.<br />
+</p>
+<p><strong>Sample:</strong> A sample of the file data with descriptions of each field. Useful if this file type is not a widely used and documented standard.</p>
+<p>For example, the description the CGmap file format for DNA methylation data would look:</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="example.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="whole-genome-sequencing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="describing-primary-data-file-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

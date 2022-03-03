@@ -1,1 +1,10 @@
-
+bookdown::gitbook:
+  split_by: section
+  css: [css/style.css, css/box.css]
+  config:
+    toc:
+      before: |
+        <li><a href="./">TKI Indigenous Genomics<br>Data Standards</a></li>
+    sharing:
+      github: yes
+      facebook: no

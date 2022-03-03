@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics</title>
+  <title>5.3 Processed data | Data Standards - TKI Indigenous Genomics</title>
   <meta name="description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics" />
+  <meta property="og:title" content="5.3 Processed data | Data Standards - TKI Indigenous Genomics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tki-indigenous-genomics/standards" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Metadata | Data Standards - TKI Indigenous Genomics" />
+  <meta name="twitter:title" content="5.3 Processed data | Data Standards - TKI Indigenous Genomics" />
   
   <meta name="twitter:description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="example.html"/>
-<link rel="next" href="whole-genome-sequencing.html"/>
+<link rel="prev" href="mapped-data.html"/>
+<link rel="next" href="reproducible-research.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -130,17 +130,92 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="metadata" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Metadata</h1>
+<div id="processed-data" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Processed data</h2>
+<div id="cgmap" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> CGmap</h3>
+<p><strong>File type:</strong> CGmap<br />
+<strong>Description:</strong> TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.
+<strong>Compression:</strong> gzip
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong><br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br />
+<strong>Sample:</strong></p>
+<pre><code>chr1    G   3000851 CHH CC  0.1 1   10
+chr1    C   3001624 CHG CA  0.0 0   9
+chr1    C   3001631 CG  CG  1.0 5   5</code></pre>
+<p>Format descriptions (columns):</p>
+<pre><code>(1) chromosome \
+(2) nucleotide on Watson (+) strand \
+(3) position \
+(4) context (CG/CHG/CHH) \
+(5) dinucleotide-context (CA/CC/CG/CT) \
+(6) methylation-level = #_of_C / (#_of_C + #_of_T) \
+(7) #_of_C (methylated C, the count of reads showing C here) \
+(8) = #_of_C + #_of_T (all Cytosines, the count of reads showing C or T here)</code></pre>
+</div>
+<div id="atcgmap" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> ATCGmap</h3>
+<p><strong>File type:</strong> ATCGmap<br />
+<strong>Description:</strong> TSV file of stranded pileup base calls for DNA methylation data.<br />
+<strong>Compression:</strong> gzip<br />
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong> YES<br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br />
+<strong>Sample:</strong></p>
+<pre><code>chr1    T   3009410 --  --  0   10  0   0   0   0   0   0   0   0   na
+chr1    C   3009411 CHH CC  0   10  0   0   0   0   0   0   0   0   0.0
+chr1    C   3009412 CHG CC  0   10  0   0   0   0   0   0   0   0   0.0
+chr1    C   3009413 CG  CG  0   10  50  0   0   0   0   0   0   0   0.83</code></pre>
+<p>Format descriptions (columns):</p>
+<pre><code>(1) chromosome \
+(2) nucleotide on Watson (+) strand \
+(3) position \
+(4) context (CG/CHG/CHH) \
+(5) dinucleotide-context (CA/CC/CG/CT) \
+(6) - (10) plus strand \
+(6) # of reads from Watson strand mapped here, support A on Watson strand \
+(7) # of reads from Watson strand mapped here, support T on Watson strand \
+(8) # of reads from Watson strand mapped here, support C on Watson strand \
+(9) # of reads from Watson strand mapped here, support G on Watson strand \
+(10) # of reads from Watson strand mapped here, support N \
+(11) - (15) minus strand \
+(11) # of reads from Crick strand mapped here, support A on Watson strand and T on Crick strand \
+(12) # of reads from Crick strand mapped here, support T on Watson strand and A on Crick strand \
+(13) # of reads from Crick strand mapped here, support C on Watson strand and G on Crick strand \
+(14) # of reads from Crick strand mapped here, support G on Watson strand and C on Crick strand \
+(15) # of reads from Crick strand mapped here, support N \
+(16) methylation_level = #C/(#C+#T) = C8/(C7+C8) for Watson strand, =C14/(C11+C14) for Crick strand \
+&quot;nan&quot; means none reads support C/T at this position. \</code></pre>
+</div>
+<div id="bigwig" class="section level3" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Bigwig</h3>
+<p><strong>File type:</strong> Bigwig<br />
+<strong>Description:</strong><br />
+<strong>Compression:</strong><br />
+<strong>Permissions:</strong><br />
+<strong>Access frequency:</strong><br />
+<strong>Community access:</strong><br />
+<strong>Identifiable:</strong><br />
+<strong>Location:</strong><br />
+<strong>Notes:</strong></p>
 
 </div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="example.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="whole-genome-sequencing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="mapped-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reproducible-research.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
