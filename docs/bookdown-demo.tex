@@ -1,11 +1,13 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
+  11pt,
 ]{book}
 \title{Data Standards - TKI Indigenous Genomics}
-\author{Sam Buckberry \& Jimmy Breen}
+\author{Sam Buckberry, Jimmy Breen}
 \date{2022-03-03}
 
 \usepackage{amsmath,amssymb}
@@ -41,8 +43,12 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Data Standards - TKI Indigenous Genomics},
-  pdfauthor={Sam Buckberry \& Jimmy Breen},
-  hidelinks,
+  pdfauthor={Sam Buckberry, Jimmy Breen},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
@@ -90,15 +96,16 @@
 \maketitle
 
 {
+\hypersetup{linkcolor=}
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\listoffigures
+\listoftables
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
-\textbf{\emph{Note: These standards are currently in development and are yet to be officially implemented}}
-
-In this era of leveraging big data and genomics for precision medicine, small populations such as Indigenous Australians are at high risk for under-representation or complete lack of representation. Our goal is to collect, curate and assemble robust datasets that encompass critical aspects of Indigenous Australian health to ensure equitable outcomes in precision medicine are possible. This includes biological, cultural and socioeconomic data to investigate health outcomes that will deliver meaningful benefit to Indigenous Australians. However, with big data also come significant responsibilities concerning data storage, sovereignty and accessibility. Large collections of data on Indigenous Australians require carefully considered data architecture that maintains sovereignty based on community-defined priorities, protocols, and agreements, with concomitant attendance to matters of accountability and building trust.
+In this era of leveraging big data and genomics for precision medicine, small populations such as Indigenous Australians are at high risk for under-representation or complete lack of representation. Our goal is to collect, curate and assemble robust datasets that encompass critical aspects of Indigenous Australian health to ensure equitable outcomes in precision medicine are possible. This includes biological, cultural and socio-economic data to investigate health outcomes that will deliver meaningful benefit to Indigenous Australians. However, with big data also come significant responsibilities concerning data storage, sovereignty and accessibility. Large collections of data on Indigenous Australians require carefully considered data architecture that maintains sovereignty based on community-defined priorities, protocols, and agreements, with concomitant attendance to matters of accountability and building trust.
 
 Here we outline TKI Indigenous Genomics groups standards for data storage, access and sharing. \textbf{The goal of these data standards is to document the policies, rules, and standards governing how data are stored, secured, arranged, integrated, and used in analyses and reporting.} These standards are being developed in consultation with Indigenous Communities. Where possible, these standards will also align with the The Global Alliance for Genomics and Health \href{https://www.ga4gh.org/}{GA4GH} standards. A well-considered approach to data architecture is critical given the national importance of Indigenous genomics data security.
 
@@ -343,6 +350,12 @@ Format descriptions (columns):
 \textbf{Identifiable:}\\
 \textbf{Location:}\\
 \textbf{Notes:}
+
+\hypertarget{reproducible-research}{%
+\chapter{Reproducible research}\label{reproducible-research}}
+
+\hypertarget{reproducible-research-practices}{%
+\section{Reproducible research practices}\label{reproducible-research-practices}}
 
 \hypertarget{how-to-contribute}{%
 \chapter{How to contribute}\label{how-to-contribute}}

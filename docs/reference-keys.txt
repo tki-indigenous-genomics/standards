@@ -16,4 +16,6 @@ processed-data
 cgmap
 atcgmap
 bigwig
+reproducible-research
+reproducible-research-practices
 how-to-contribute
