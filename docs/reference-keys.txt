@@ -4,7 +4,13 @@ data-descriptors-definitions
 describing-primary-data-file-types
 file-type-descriptors
 example
-metadata
+conventions
+directory-structure
+participant-readme-file
+file-compression
+checksums
+date-formats
+seperating-elements-in-file-names
 whole-genome-sequencing
 cram
 vcf

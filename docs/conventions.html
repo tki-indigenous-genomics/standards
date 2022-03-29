@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Whole genome sequencing | Data Standards - TKI Indigenous Genomics</title>
+  <title>Chapter 3 Conventions | Data Standards - TKI Indigenous Genomics</title>
   <meta name="description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Whole genome sequencing | Data Standards - TKI Indigenous Genomics" />
+  <meta property="og:title" content="Chapter 3 Conventions | Data Standards - TKI Indigenous Genomics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tki-indigenous-genomics/standards" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Whole genome sequencing | Data Standards - TKI Indigenous Genomics" />
+  <meta name="twitter:title" content="Chapter 3 Conventions | Data Standards - TKI Indigenous Genomics" />
   
   <meta name="twitter:description" content="TKI Indigenous Genomics groups standards for data storage, access and sharing." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="conventions.html"/>
-<link rel="next" href="dna-methylation.html"/>
+<link rel="prev" href="data-descriptors-definitions.html"/>
+<link rel="next" href="whole-genome-sequencing.html"/>
 <script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -139,31 +139,71 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="whole-genome-sequencing" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Whole genome sequencing<a href="whole-genome-sequencing.html#whole-genome-sequencing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="cram" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> CRAM<a href="whole-genome-sequencing.html#cram" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>File type:</strong> CRAM<br />
-<strong>Description:</strong> CRAM supports a wide
-range of lossless and lossy sequence data preservation strategies enabling users to choose which data should be preserved. <a href="https://www.ga4gh.org/cram/">CRAM is the genomics compression standard for GA4GH</a><br />
-<strong>Compression:</strong> NA<br />
-<strong>Permissions:</strong><br />
-<strong>Community access:</strong><br />
-<strong>Location:</strong>
-<strong>Notes:</strong> When used with a reference genome, this exact reference genome file should be recorded.<br />
-<a href="https://samtools.github.io/hts-specs/CRAMv3.pdf">CRAM specification</a></p>
+<div id="conventions" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Conventions<a href="conventions.html#conventions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="directory-structure" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Directory structure<a href="conventions.html#directory-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Virtually all of our raw data is generated from samples gifted Aboriginal and Torres Strait Islander peoples, and they must retain access to and control over the samples and data.</p>
+<p>Here, the primary directory structure of raw and processed data, and any identifiable data that relates to a single individual will be stored in a directory structure with the individuals unique identifier as the higher level directory. In the event of a person requesting their data to be deleted, this should be possible by deleting the top level folder associated to their participant id. Below that, the data should be organised by assay type (wgs, DNAme, RNA-seq), and then the data types for each assay.</p>
+<pre><code>├── ID
+  ├── readme.md
+  ├── WGS
+    ├── raw
+    ├── aligned
+  ├── DNAme
+    ├── raw
+    ├── aligned
+  ├── RNA
+    ├── raw
+    ├── aligned</code></pre>
+<p>For example, the directory structure for individual with the id <code>BODLAXXRD</code> might look like this.</p>
+<pre><code>├── data
+    ├── BODLAXXRD
+        ├── readme.md
+        ├── WGS
+          ├── raw
+            ├── BODLAXXRD_wgs_unaligned_1.cram
+          ├── aligned
+            ├── BODLAXXRD_wgs_aligned.cram
+          ├── processed
+            ├── BODLAXXRD_wgs.vcf
+        ├── DNAme
+          ├── raw
+            ├── BODLAXXRD_DNAme_unaligned.cram
+          ├── aligned
+            ├── BODLAXXRD_DNAme_aligned.cram
+          ├── processed
+            ├── BODLAXXRD_DNAme.ATCGmap.gz
+            ├── BODLAXXRD_DNAme.CGmap.gz
+        ├── RNA
+          ├── raw
+            ├── BODLAXXRD_RNA.cram
+          ├── aligned
+            ├── BODLAXXRD_RNA.cram</code></pre>
 </div>
-<div id="vcf" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> VCF<a href="whole-genome-sequencing.html#vcf" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>File type:</strong> VCF<br />
-<strong>Description:</strong><br />
-<strong>Compression:</strong><br />
-<strong>Permissions:</strong><br />
-<strong>Access frequency:</strong><br />
-<strong>Community access:</strong><br />
-<strong>Identifiable:</strong><br />
-<strong>Location:</strong><br />
-<strong>Notes:</strong></p>
+<div id="participant-readme-file" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Participant README file<a href="conventions.html#participant-readme-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>lorem ipsum</p>
+</div>
+<div id="file-compression" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> File compression<a href="conventions.html#file-compression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>lorem ipsum</p>
+</div>
+<div id="checksums" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Checksums<a href="conventions.html#checksums" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>lorem ipsum</p>
+</div>
+<div id="date-formats" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Date formats<a href="conventions.html#date-formats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Use the format <code>YYYYMMDD</code></p>
+<p>Use <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 formatted dates</a> where date and time values are ordered from the largest to smallest unit of time: year, month (or week) and day, minute, second. These formats enable easy chronological sorting.</p>
+<p>For example, 5 Jan 2012 would be <code>20120105</code></p>
+</div>
+<div id="seperating-elements-in-file-names" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Seperating elements in file names<a href="conventions.html#seperating-elements-in-file-names" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Use the underscore <code>_</code> to separate elements in file names.</p>
+<p>This refers to the characters you will use to separate each piece of metadata in the file name. Many computer systems cannot handle spaces in file names, so NEVER use spaces!</p>
+<p>Dashes (-) or capitalising the first letter of each word (CammelCaps) is also often used, however to make things simple, we prefer the use of the underscore <code>_</code>.</p>
 
 </div>
 </div>
@@ -172,8 +212,8 @@ range of lossless and lossy sequence data preservation strategies enabling users
           </div>
         </div>
       </div>
-<a href="conventions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dna-methylation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-descriptors-definitions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="whole-genome-sequencing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
