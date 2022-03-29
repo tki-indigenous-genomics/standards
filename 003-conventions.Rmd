@@ -1,0 +1,70 @@
+# Conventions
+
+## Directory structure
+Virtually all of our raw data is generated from samples gifted Aboriginal and Torres Strait Islander peoples, and they must retain access to and control over the samples and data.  
+
+Here, the primary directory structure of raw and processed data, and any identifiable data that relates to a single individual will be stored in a directory structure with the individuals unique identifier as the higher level directory. In the event of a person requesting their data to be deleted, this should be possible by deleting the top level folder associated to their participant id. Below that, the data should be organised by assay type (wgs, DNAme, RNA-seq), and then the data types for each assay.
+```
+├── ID
+  ├── readme.md
+  ├── WGS
+    ├── raw
+    ├── aligned
+  ├── DNAme
+    ├── raw
+    ├── aligned
+  ├── RNA
+    ├── raw
+    ├── aligned
+```
+
+For example, the directory structure for individual with the id `BODLAXXRD` might look like this.    
+```
+├── data
+    ├── BODLAXXRD
+        ├── readme.md
+        ├── WGS
+          ├── raw
+            ├── BODLAXXRD_wgs_unaligned_1.cram
+          ├── aligned
+            ├── BODLAXXRD_wgs_aligned.cram
+          ├── processed
+            ├── BODLAXXRD_wgs.vcf
+        ├── DNAme
+          ├── raw
+            ├── BODLAXXRD_DNAme_unaligned.cram
+          ├── aligned
+            ├── BODLAXXRD_DNAme_aligned.cram
+          ├── processed
+            ├── BODLAXXRD_DNAme.ATCGmap.gz
+            ├── BODLAXXRD_DNAme.CGmap.gz
+        ├── RNA
+          ├── raw
+            ├── BODLAXXRD_RNA.cram
+          ├── aligned
+            ├── BODLAXXRD_RNA.cram
+```
+
+## Participant README file
+lorem ipsum
+
+## File compression
+lorem ipsum
+
+## Checksums
+lorem ipsum
+
+## Date formats
+Use the format `YYYYMMDD`  
+
+Use [ISO 8601 formatted dates](https://en.wikipedia.org/wiki/ISO_8601) where date and time values are ordered from the largest to smallest unit of time: year, month (or week) and day, minute, second.  These formats enable easy chronological sorting.  
+
+For example, 5 Jan 2012 would be `20120105` 
+
+## Seperating elements in file names
+Use the underscore `_` to separate elements in file names. 
+
+This refers to the characters you will use to separate each piece of metadata in the file name. Many computer systems cannot handle spaces in file names, so NEVER use spaces!
+
+Dashes (-) or capitalising the first letter of each word (CammelCaps) is also often used, however to make things simple, we prefer the use of the underscore `_`.
+
