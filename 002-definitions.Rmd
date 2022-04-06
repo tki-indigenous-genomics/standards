@@ -1,11 +1,13 @@
-# Data descriptors & definitions
+# File type descriptors & definitions
 
 This page provides definitions and guidance on the information that should be recorded for primary data files. Data that is clearly, simply and consistently described (named and defined) is much easier for users to identify, understand, use and share the data. This also ensures consistency across projects, inter-operability and is complementary to reproducible research practices. 
 
-## Describing primary data file types
-Biological data continue to be produced from an extensive array of assays and technologies. These data are often represented in unique file types and processed by specific software and algorithms. **Below are descriptors that should be used for each file type.**   
+**If you will be working with a file type that is not described in these standards, please add a record.**
 
-## File type descriptors
+## Describing primary data file types
+Biological data continue to be produced from an extensive array of assays and technologies. These data are often represented in unique file types and processed by specific software and algorithms. **Below are descriptors that we aim to use for each file type.**   
+
+---
 
 **File type:** This is the file format to be typically denoted by the file extension.  
 
@@ -36,7 +38,7 @@ Biological data continue to be produced from an extensive array of assays and te
 
 **Sample:** A sample of the file data with descriptions of each field. Useful if this file type is not a widely used and documented standard.
 
-## Example
+## File type descriptor example
 
 For example, the description of CGmap file format for DNA methylation data would look like this:
 

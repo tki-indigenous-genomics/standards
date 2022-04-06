@@ -1,3 +1,5 @@
-# Reproducible research
+# Reproducible research practice
 
-## Reproducible research practices
+## Standardised workflows
+
+## Reproducible data analyses

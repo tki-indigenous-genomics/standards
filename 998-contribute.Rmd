@@ -1,3 +1,5 @@
 # How to contribute
 
-Lorem ipsum
+To contribute to these standards, [please submit a pull request through the GitHub repo](https://github.com/tki-indigenous-genomics/standards/compare).
+
+Documentation on how to submit pull requests can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).

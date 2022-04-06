@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Black Ochre Data Labs: Data Standards</title>
+  <title>Chapter 2 File type descriptors &amp; definitions | Black Ochre Data Labs: Data Standards</title>
   <meta name="description" content="Black Ochre Data Labs standards for data storage and access" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Black Ochre Data Labs: Data Standards" />
+  <meta property="og:title" content="Chapter 2 File type descriptors &amp; definitions | Black Ochre Data Labs: Data Standards" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tki-indigenous-genomics/standards" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Black Ochre Data Labs: Data Standards" />
+  <meta name="twitter:title" content="Chapter 2 File type descriptors &amp; definitions | Black Ochre Data Labs: Data Standards" />
   
   <meta name="twitter:description" content="Black Ochre Data Labs standards for data storage and access" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="file-type-descriptors-definitions.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="conventions.html"/>
 <script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -147,38 +147,69 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Black Ochre Data Labs: Data Standards</h1>
-<p class="author"><em>Sam Buckberry, Jimmy Breen</em></p>
-<p class="date"><em>2022-04-06</em></p>
+<div id="file-type-descriptors-definitions" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> File type descriptors &amp; definitions<a href="file-type-descriptors-definitions.html#file-type-descriptors-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This page provides definitions and guidance on the information that should be recorded for primary data files. Data that is clearly, simply and consistently described (named and defined) is much easier for users to identify, understand, use and share the data. This also ensures consistency across projects, inter-operability and is complementary to reproducible research practices.</p>
+<p><strong>If you will be working with a file type that is not described in these standards, please add a record.</strong></p>
+<div id="describing-primary-data-file-types" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Describing primary data file types<a href="file-type-descriptors-definitions.html#describing-primary-data-file-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Biological data continue to be produced from an extensive array of assays and technologies. These data are often represented in unique file types and processed by specific software and algorithms. <strong>Below are descriptors that we aim to use for each file type.</strong></p>
+<hr />
+<p><strong>File type:</strong> This is the file format to be typically denoted by the file extension.</p>
+<p><strong>Description:</strong> A brief description of the file format.</p>
+<p><strong>Compression:</strong> The algorithm and/or method used to compress the file.<br />
+</p>
+<p><strong>Permissions:</strong> These are the user permission profiles for the groups and users that have access to the data, and the level of access<br />
+</p>
+<ul>
+<li>Category 1: (Highest): Lead PI (Alex Brown) and Chief Data Scientist (Jimmy Breen)</li>
+<li>Category 2: Lead PI, Chief Data Scientist and Data Science team</li>
+<li>Category 3: Lead PI, Chief Data Scientist, Data Science team and TKI IT Team</li>
+<li>Category 4: (Lowest): Public</li>
+</ul>
+<p><strong>Access frequency:</strong> How often this data type may require access. These descriptions are based on a subset of the <a href="https://cloud.google.com/storage/docs/storage-classes#classes">Google Cloud storage class descriptors</a>.</p>
+<ul>
+<li><strong>Standard:</strong> Standard Storage is for data that is frequently accessed and/or stored for only brief periods of time. Standard data files should be able to be regenerated from Nearline or Archive data files without too much time or effort.</li>
+<li><strong>Nearline:</strong> Nearline Storage is ideal for data you plan to read or modify on average once per month or less. Nearline Storage is appropriate for data backup and short-term archiving.</li>
+<li><strong>Archive:</strong> highly durable storage for data archiving, backup, and disaster recovery. Only used for infrequently accessed data.</li>
+</ul>
+<p><strong>Community access:</strong> Are their community custodians for these data? If so, who are they?<br />
+</p>
+<p><strong>Identifiable:</strong> Could this data be used to identify an individual (YES/NO).<br />
+</p>
+<p><strong>Location:</strong> Location(s) where the data should be stored.<br />
+</p>
+<p><strong>Notes:</strong> Any additional information that would assist users of the data.<br />
+</p>
+<p><strong>Sample:</strong> A sample of the file data with descriptions of each field. Useful if this file type is not a widely used and documented standard.</p>
 </div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<table>
-<tbody>
-<tr class="odd">
-<td><strong>Note: This is a living document and is under continuous development and review.</strong></td>
-</tr>
-</tbody>
-</table>
-<div id="rationale" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Rationale<a href="index.html#rationale" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this era of leveraging big data and genomics for precision medicine, small populations such as Indigenous Australians are at high risk for under-representation or complete lack of representation. Our goal is to collect, curate and assemble robust datasets that encompass critical aspects of Indigenous Australian health to ensure equitable outcomes in precision medicine are possible. This includes biological, cultural and socio-economic data to investigate health outcomes that will deliver meaningful benefit to Indigenous Australians. However, with big data also come significant responsibilities concerning data storage, sovereignty and accessibility. Large collections of data on Indigenous Australians require carefully considered data architecture that maintains sovereignty based on community-defined priorities, protocols, and agreements, with concomitant attendance to matters of accountability and building trust.</p>
-<p>Here we outline Black Ochre Data Labs standards for data storage, access and sharing.</p>
-<p><strong>The goal of these data standards is to document the policies, rules, and standards governing how data are stored, secured, arranged, integrated, and used in analyses and reporting.</strong></p>
-<p>These standards are being developed in consultation with Indigenous Communities. Where possible, these standards will also align with the The Global Alliance for Genomics and Health <a href="https://www.ga4gh.org/">GA4GH</a> standards. A well-considered approach to data architecture is critical given the national importance of Indigenous genomics data security.</p>
-</div>
-<div id="how-to-use-and-contribute-to-this-book" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> How to use and contribute to this book<a href="index.html#how-to-use-and-contribute-to-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This reference book is primarily for recording specific data standards and practices used in Black Ochre Data Labs.</p>
-<p>Before you begin to move, store, compress or analyse data:</p>
-<ol style="list-style-type: decimal">
-<li>Review the standards on directory structure, file names and compression.</li>
-<li>Follow the standards regarding the types of data you will be working with.</li>
-<li>If the file types and workflows you are working with have not been documented, please add a record.</li>
-</ol>
-<p>To contribute to these standards, <a href="https://github.com/tki-indigenous-genomics/standards/compare">please submit a pull request through the GitHub repo</a>.</p>
-<p>Documentation on how to submit pull requests can be found <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">here</a>.</p>
+<div id="file-type-descriptor-example" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> File type descriptor example<a href="file-type-descriptors-definitions.html#file-type-descriptor-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For example, the description of CGmap file format for DNA methylation data would look like this:</p>
+<blockquote>
+<p><strong>File type:</strong> CGmap<br />
+<strong>Description:</strong> TSV file of stranded pileup base calls for cytosine positions in the reference genome DNA methylation data.<br />
+<strong>Compression:</strong> gzip<br />
+<strong>Permissions:</strong> Category 2<br />
+<strong>Access frequency:</strong> Nearline<br />
+<strong>Community access:</strong> TBD<br />
+<strong>Identifiable:</strong> No<br />
+<strong>Location:</strong> server_name::/location/of/data/<br />
+<strong>Notes:</strong> This file type is output from <a href="https://github.com/BSSeeker/BSseeker2">BSSeeker2</a> and used by <a href="https://cgmaptools.github.io/">CGmap tools</a><br />
+<strong>Sample:</strong></p>
+<p>chr1 G 3000851 CHH CC 0.1 1 10<br />
+chr1 C 3001624 CHG CA 0.0 0 9<br />
+chr1 C 3001631 CG CG 1.0 5 5</p>
+<p>Format descriptions (columns):<br />
+(1) chromosome<br />
+(2) nucleotide on Watson (+) strand<br />
+(3) position<br />
+(4) context (CG/CHG/CHH)<br />
+(5) dinucleotide-context (CA/CC/CG/CT)<br />
+(6) methylation-level = #_of_C / (#_of_C + #_of_T)<br />
+(7) #_of_C (methylated C, the count of reads showing C here)<br />
+(8) = #_of_C + #_of_T (all Cytosines, the count of reads showing C or T here)</p>
+</blockquote>
 
 </div>
 </div>
@@ -187,8 +218,8 @@
           </div>
         </div>
       </div>
-
-<a href="file-type-descriptors-definitions.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conventions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

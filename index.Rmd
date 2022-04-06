@@ -1,5 +1,5 @@
 --- 
-title: "Data Standards - TKI Indigenous Genomics"
+title: "Black Ochre Data Labs: Data Standards"
 author: "Sam Buckberry, Jimmy Breen"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -9,7 +9,7 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: tki-indigenous-genomics/standards
-description: "TKI Indigenous Genomics groups standards for data storage, access and sharing."
+description: "Black Ochre Data Labs standards for data storage and access"
 colorlinks: yes
 graphics: yes
 lot: yes
@@ -25,17 +25,34 @@ knitr::write_bib(c(
 
 ```
 
+
 # Introduction
 
-```{asis, echo=!knitr::is_latex_output()}
-::: {.infobox .caution}
-***Note: This is a living document and is under continuous development and review, and these standards are yet to be officially implemented***
-:::
-```
+---
+**Note: This is a living document and is under continuous development and review.**
+---
 
+## Rationale
 In this era of leveraging big data and genomics for precision medicine, small populations such as Indigenous Australians are at high risk for under-representation or complete lack of representation. Our goal is to collect, curate and assemble robust datasets that encompass critical aspects of Indigenous Australian health to ensure equitable outcomes in precision medicine are possible. This includes biological, cultural and socio-economic data to investigate health outcomes that will deliver meaningful benefit to Indigenous Australians. However, with big data also come significant responsibilities concerning data storage, sovereignty and accessibility. Large collections of data on Indigenous Australians require carefully considered data architecture that maintains sovereignty based on community-defined priorities, protocols, and agreements, with concomitant attendance to matters of accountability and building trust.  
 
-Here we outline TKI Indigenous Genomics groups standards for data storage, access and sharing. **The goal of these data standards is to document the policies, rules, and standards governing how data are stored, secured, arranged, integrated, and used in analyses and reporting.** These standards are being developed in consultation with Indigenous Communities. Where possible, these standards will also align with the The Global Alliance for Genomics and Health [GA4GH](https://www.ga4gh.org/) standards. A well-considered approach to data architecture is critical given the national importance of Indigenous genomics data security.
+Here we outline Black Ochre Data Labs standards for data storage, access and sharing.  
 
-## Structure of this book
+**The goal of these data standards is to document the policies, rules, and standards governing how data are stored, secured, arranged, integrated, and used in analyses and reporting.**  
+
+These standards are being developed in consultation with Indigenous Communities. Where possible, these standards will also align with the The Global Alliance for Genomics and Health [GA4GH](https://www.ga4gh.org/) standards. A well-considered approach to data architecture is critical given the national importance of Indigenous genomics data security.
+
+## How to use and contribute to this book 
+This reference book is primarily for recording specific data standards and practices used in Black Ochre Data Labs. 
+
+Before you begin to move, store, compress or analyse data:
+
+1. Review the standards on directory structure, file names and compression.
+2. Follow the standards regarding the types of data you will be working with.
+3. If the file types and workflows you are working with have not been documented, please add a record.
+
+To contribute to these standards, [please submit a pull request through the GitHub repo](https://github.com/tki-indigenous-genomics/standards/compare).
+
+Documentation on how to submit pull requests can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+
+
 
