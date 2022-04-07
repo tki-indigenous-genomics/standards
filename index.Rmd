@@ -29,7 +29,7 @@ knitr::write_bib(c(
 # Introduction
 
 ---
-**Note: This is a living document and is under continuous development and review.**
+**Note: This is a living document (in its infancy) and is under continuous development and review.**
 ---
 
 ## Rationale
@@ -46,11 +46,11 @@ This reference book is primarily for recording specific data standards and pract
 
 Before you begin to move, store, compress or analyse data:
 
-1. Review the standards on directory structure, file names and compression.
+1. Review the standards on security and privacy, directory structure, file names and compression.
 2. Follow the standards regarding the types of data you will be working with.
-3. If the file types and workflows you are working with have not been documented, please add a record.
+3. If the file types and workflows you are working with have not been documented, please work towards documenting them here.
 
-To contribute to these standards, [please submit a pull request through the GitHub repo](https://github.com/tki-indigenous-genomics/standards/compare).
+To contribute to these standards, [please submit a pull request through this books GitHub repo](https://github.com/tki-indigenous-genomics/standards/compare).
 
 Documentation on how to submit pull requests can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
