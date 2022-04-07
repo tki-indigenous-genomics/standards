@@ -91,5 +91,5 @@ For example, 5 Jan 2012 would be `20120105`
 ## File compression
 All data files should be compressed using the method described for the file type in the standards for that assay. 
 
-## Participant README file
+## README files
 Each folder created with a participant id should be initialised with a `REAMDME.md` file. This file should used to record any relevant specifics for this sample. This could include details such as anomalies observed in a FASTQC report, below expected alignment rates, outlier on clustering, etc.  
