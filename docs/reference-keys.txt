@@ -2,11 +2,11 @@ introduction
 rationale
 how-to-use-and-contribute-to-this-book
 privacy-and-security
-preserving-anonymity
+preserving-participant-anonymity
 participant-identifiers
 data-encryption
 encryption-at-rest
-using-external-compute-resources
+server-and-database-authentication
 conventions
 directory-structure
 file-naming

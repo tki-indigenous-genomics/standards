@@ -1,6 +1,6 @@
 # Privacy and security
 
-## Preserving anonymity
+## Preserving participant anonymity
 
 ### Participant identifiers
 
@@ -13,7 +13,7 @@ When thinking about data encryption, we consider three three main scenarios:
 3. **Encrypting data in use** refers to the maintenance of encryption while the data is actively being used in RAM or CPU.
 
 ### Encryption at rest
-Data that has the ability to identify participants, such as sequence data and variant calls should be encrypted-at-rest.  
+Data that has the ability to identify participants, such as sequence data and variant calls should be encrypted-at-rest. 
 
 
-## Using external compute resources
+## Server and database authentication

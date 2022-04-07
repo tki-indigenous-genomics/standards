@@ -27,9 +27,10 @@ range of lossless and lossy sequence data preservation strategies enabling users
 range of lossless and lossy sequence data preservation strategies enabling users to choose which data should be preserved. [CRAM is the genomics compression standard for GA4GH](https://www.ga4gh.org/cram/) \
 **Compression:** Genozip  
 **Permissions:** Category 1  
+**Access frequency:**  
 **Community access:** TBD  
 **Identifiable:** Yes  
-**Location:**  
+**Location:** `/participant_id/wgs/processed/participant_id_.cram` 
 **Notes:** When used with a reference genome, this exact reference genome file should be recorded.   
 
 ---
@@ -39,11 +40,11 @@ range of lossless and lossy sequence data preservation strategies enabling users
 ## VCF
 
 **File type:** VCF  
-**Description:**  
-**Compression:**  
-**Permissions:**  
+**Description:**  [Variant Call Format](samtools.github.io/hts-specs/VCFv4.2.pdf)
+**Compression:**  Genozip  
+**Permissions:**  Category 1
 **Access frequency:**  
-**Community access:**  
-**Identifiable:**  
-**Location:**  
+**Community access:**  TBD
+**Identifiable:**  Yes
+**Location:**  `/participant_id/wgs/processed/participant_id_.vcf.genozip`
 **Notes:**  

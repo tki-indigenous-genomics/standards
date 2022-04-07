@@ -24,7 +24,7 @@
 <meta name="author" content="Sam Buckberry, Jimmy Breen" />
 
 
-<meta name="date" content="2022-04-07" />
+<meta name="date" content="2022-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -82,7 +82,7 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="privacy-and-security.html"><a href="privacy-and-security.html"><i class="fa fa-check"></i><b>2</b> Privacy and security<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#preserving-anonymity"><i class="fa fa-check"></i><b>2.1</b> Preserving anonymity<span></span></a>
+<li class="chapter" data-level="2.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#preserving-participant-anonymity"><i class="fa fa-check"></i><b>2.1</b> Preserving participant anonymity<span></span></a>
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#participant-identifiers"><i class="fa fa-check"></i><b>2.1.1</b> Participant identifiers<span></span></a></li>
 </ul></li>
@@ -90,7 +90,7 @@
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#encryption-at-rest"><i class="fa fa-check"></i><b>2.2.1</b> Encryption at rest<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="privacy-and-security.html"><a href="privacy-and-security.html#using-external-compute-resources"><i class="fa fa-check"></i><b>2.3</b> Using external compute resources<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="privacy-and-security.html"><a href="privacy-and-security.html#server-and-database-authentication"><i class="fa fa-check"></i><b>2.3</b> Server and database authentication<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="conventions.html"><a href="conventions.html"><i class="fa fa-check"></i><b>3</b> Conventions<span></span></a>
 <ul>
@@ -187,9 +187,10 @@ range of lossless and lossy sequence data preservation strategies enabling users
 range of lossless and lossy sequence data preservation strategies enabling users to choose which data should be preserved. <a href="https://www.ga4gh.org/cram/">CRAM is the genomics compression standard for GA4GH</a><br />
 <strong>Compression:</strong> Genozip<br />
 <strong>Permissions:</strong> Category 1<br />
+<strong>Access frequency:</strong><br />
 <strong>Community access:</strong> TBD<br />
 <strong>Identifiable:</strong> Yes<br />
-<strong>Location:</strong><br />
+<strong>Location:</strong> <code>/participant_id/wgs/processed/participant_id_.cram</code>
 <strong>Notes:</strong> When used with a reference genome, this exact reference genome file should be recorded.</p>
 <hr />
 </div>
@@ -200,13 +201,13 @@ range of lossless and lossy sequence data preservation strategies enabling users
 <div id="vcf" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> VCF<a href="whole-genome-sequencing.html#vcf" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>File type:</strong> VCF<br />
-<strong>Description:</strong><br />
-<strong>Compression:</strong><br />
-<strong>Permissions:</strong><br />
+<strong>Description:</strong> <a href="samtools.github.io/hts-specs/VCFv4.2.pdf">Variant Call Format</a>
+<strong>Compression:</strong> Genozip<br />
+<strong>Permissions:</strong> Category 1
 <strong>Access frequency:</strong><br />
-<strong>Community access:</strong><br />
-<strong>Identifiable:</strong><br />
-<strong>Location:</strong><br />
+<strong>Community access:</strong> TBD
+<strong>Identifiable:</strong> Yes
+<strong>Location:</strong> <code>/participant_id/wgs/processed/participant_id_.vcf.genozip</code>
 <strong>Notes:</strong></p>
 
 </div>
