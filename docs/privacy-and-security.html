@@ -24,7 +24,7 @@
 <meta name="author" content="Sam Buckberry, Jimmy Breen" />
 
 
-<meta name="date" content="2022-04-06" />
+<meta name="date" content="2022-04-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -82,8 +82,15 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="privacy-and-security.html"><a href="privacy-and-security.html"><i class="fa fa-check"></i><b>2</b> Privacy and security<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#preserving-anonymity"><i class="fa fa-check"></i><b>2.1</b> Preserving anonymity<span></span></a></li>
-<li class="chapter" data-level="2.2" data-path="privacy-and-security.html"><a href="privacy-and-security.html#file-encryption"><i class="fa fa-check"></i><b>2.2</b> File encryption<span></span></a></li>
+<li class="chapter" data-level="2.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#preserving-anonymity"><i class="fa fa-check"></i><b>2.1</b> Preserving anonymity<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#participant-identifiers"><i class="fa fa-check"></i><b>2.1.1</b> Participant identifiers<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="privacy-and-security.html"><a href="privacy-and-security.html#data-encryption"><i class="fa fa-check"></i><b>2.2</b> Data encryption<span></span></a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="privacy-and-security.html"><a href="privacy-and-security.html#encryption-at-rest"><i class="fa fa-check"></i><b>2.2.1</b> Encryption at rest<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="privacy-and-security.html"><a href="privacy-and-security.html#using-external-compute-resources"><i class="fa fa-check"></i><b>2.3</b> Using external compute resources<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="conventions.html"><a href="conventions.html"><i class="fa fa-check"></i><b>3</b> Conventions<span></span></a>
 <ul>
@@ -91,7 +98,7 @@
 <li class="chapter" data-level="3.2" data-path="conventions.html"><a href="conventions.html#file-naming"><i class="fa fa-check"></i><b>3.2</b> File naming<span></span></a></li>
 <li class="chapter" data-level="3.3" data-path="conventions.html"><a href="conventions.html#date-formats"><i class="fa fa-check"></i><b>3.3</b> Date formats<span></span></a></li>
 <li class="chapter" data-level="3.4" data-path="conventions.html"><a href="conventions.html#file-compression"><i class="fa fa-check"></i><b>3.4</b> File compression<span></span></a></li>
-<li class="chapter" data-level="3.5" data-path="conventions.html"><a href="conventions.html#participant-readme-file"><i class="fa fa-check"></i><b>3.5</b> Participant README file<span></span></a></li>
+<li class="chapter" data-level="3.5" data-path="conventions.html"><a href="conventions.html#readme-files"><i class="fa fa-check"></i><b>3.5</b> README files<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="file-type-descriptors-definitions.html"><a href="file-type-descriptors-definitions.html"><i class="fa fa-check"></i><b>4</b> File type descriptors &amp; definitions<span></span></a>
 <ul>
@@ -156,9 +163,27 @@
 <h1><span class="header-section-number">Chapter 2</span> Privacy and security<a href="privacy-and-security.html#privacy-and-security" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="preserving-anonymity" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Preserving anonymity<a href="privacy-and-security.html#preserving-anonymity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="participant-identifiers" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Participant identifiers<a href="privacy-and-security.html#participant-identifiers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="file-encryption" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> File encryption<a href="privacy-and-security.html#file-encryption" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="data-encryption" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Data encryption<a href="privacy-and-security.html#data-encryption" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When thinking about data encryption, we consider three three main scenarios:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Encrypting data at rest</strong> refers to the encryption of data while it’s stored on whatever file storage you use.<br />
+</li>
+<li><strong>Encrypting data in transit</strong> refers to encrypting data while it travels through private or public networks.<br />
+</li>
+<li><strong>Encrypting data in use</strong> refers to the maintenance of encryption while the data is actively being used in RAM or CPU.</li>
+</ol>
+<div id="encryption-at-rest" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Encryption at rest<a href="privacy-and-security.html#encryption-at-rest" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Data that has the ability to identify participants, such as sequence data and variant calls should be encrypted-at-rest.</p>
+</div>
+</div>
+<div id="using-external-compute-resources" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Using external compute resources<a href="privacy-and-security.html#using-external-compute-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
